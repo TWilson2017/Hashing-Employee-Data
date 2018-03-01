@@ -1,0 +1,32 @@
+                                                   Employee Report
+                                                   ***************
+
+Last Name    Acct. Number           Date of Birth           Annual Salary        Department Code         Age
+Willis			 0074               Mar. 20, 1980             23500.34                  B                 38
+Berg			*0111               Oct. 05, 1999             10000.09                  C                 18
+Thompson		*0888               Oct. 09, 1998             38494.98                  C                 19
+Alex			 0001               Nov. 03, 1980              3339.00                  D                 37
+Kelly			 0154               Oct. 30, 1990              9939.99                  I                 27
+Harry			 0010               Oct. 08, 1998              9000.99                  V                 19
+Harry			 0456               Jan. 01, 1989              3455.90                  D                 29
+Smith			*0234               Dec. 10, 1990             45000.00                  A                 27
+Jones			 9080               Oct. 11, 1959            101000.90                  X                 58
+Kelly			 0904               Oct. 06, 1994             90390.09                  C                 23
+Harry			 0206               Oct. 29, 1990              9839.90                  I                 27
+Howell			 0984               Nov. 21, 1986             22020.90                  B                 31
+Ben			     0393               Dec. 12, 1989             34589.90                  C                 28
+Johnson			 0212               Jan. 12, 1989             23432.90                  D                 29
+Horse			*0989               Nov. 13, 1978             45000.00                  A                 39
+Jackson			*0101               Oct. 10, 1995              9890.98                  T                 22
+Williams		*0989               Jan. 01, 1980             90939.09                  A                 38
+Tripp			 0102               Sep. 21, 1987             39302.90                  S                 30
+Mary			 0103               Nov. 02, 1980              3993.09                  C                 37
+Hall			 0849               Sep. 09, 1999             98908.87                  D                 18
+Mark			 0258               Nov. 01, 1990               939.09                  K                 27
+
+
+Total Annual Salary: 712979.90
+
+Total Record Count: 21
+
+
