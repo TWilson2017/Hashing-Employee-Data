@@ -14,7 +14,7 @@ class HashRecords
 		int CollisionCount[37]; //Array to hold how many collisions are in each slot
 		
 	public:
-	    //Construct a New Hash Table
+	        //Construct a New Hash Table
 		HashRecords();
 		//Read Records from a File
 		void ReadRecords(); 
@@ -41,7 +41,7 @@ class HashRecords
 		void PrintDataCollisions(HashNode*, ostream& OutF);
 		//Print the Data in the First Slot
 		void PrintFirstData(HashNode*, ostream& OutF);
-	    //Delete Memory for ALL Internal Components
+	        //Delete Memory for ALL Internal Components
 		~HashRecords();
 };//HashRecords
 #endif
