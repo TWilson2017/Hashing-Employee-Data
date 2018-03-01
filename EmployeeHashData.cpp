@@ -20,7 +20,7 @@ HashRecords :: HashRecords()
 {
 	//Initialize TotalAnnualSalary & TotalRecords to 0
 	TotalAnnualSalary = 0.00;
-    TotalRecords = 0;
+        TotalRecords = 0;
 
 	//Create a New Hash Table with 37 elements
 	LinkedHash = new HashNode*[TableSize];
@@ -57,7 +57,7 @@ void HashRecords :: ReadRecords()
 	//Test File For Error
 	if(inF.fail())
 	{
-		   cout << endl << "FATAL ERROR: UNABLE TO OPEN FILE \"Data.txt\". TERMINATING..."
+	   cout << endl << "FATAL ERROR: UNABLE TO OPEN FILE \"Data.txt\". TERMINATING..."
                 << endl << endl;
            exit (1);
 	}//if
@@ -73,7 +73,7 @@ void HashRecords :: ReadRecords()
 			dept_code6 = toupper(dept_code6);
 			
 			//Add One TotalRecords
-		    TotalRecords++;
+		       TotalRecords++;
 			
 			//Add annual_salary6 to TotalAnnualSalary
 			TotalAnnualSalary += annual_salary6;
@@ -108,11 +108,11 @@ int HashRecords :: HashFunction(int key)
 //-| 4. Insert Records into Table
 //-|---------------------------------
 void HashRecords :: Insert(char last_name2[15],char first_name2[15], unsigned int account_num2, unsigned int month2, unsigned int day2,
-		            unsigned int year2, float annual_salary2, char dept_code2, char phone_number2[12])
+		           unsigned int year2, float annual_salary2, char dept_code2, char phone_number2[12])
 {
 	//Create a new Node to Hold Inserted Data
 	HashNode *newNode = new HashNode (last_name2, first_name2, account_num2, month2, day2,
-		                              year2, annual_salary2, dept_code2, phone_number2, NULL);
+		                          year2, annual_salary2, dept_code2, phone_number2, NULL);
 	
 	//Create Hash Key
 	int Hash_Key = HashFunction(account_num2);
@@ -152,8 +152,8 @@ string HashRecords :: Date(unsigned int month3)
 {
    //Declare Array To Hold Month Abbreviation
    const string DateAbbr[12] = {"Jan. ", "Feb. ", "Mar. ", "Apr. ", 
-		                        "May ", "Jun. ", "Jul. ", "Aug. ", 
-						        "Sep. ", "Oct. ", "Nov. ", "Dec. "};
+		                "May ", "Jun. ", "Jul. ", "Aug. ", 
+			        "Sep. ", "Oct. ", "Nov. ", "Dec. "};
 	
    //Convert Month into Abbreviation
    switch(month3)
@@ -165,23 +165,23 @@ string HashRecords :: Date(unsigned int month3)
 	   case 3:  return DateAbbr[2];
 		        break;
 	   case 4:  return DateAbbr[3];
-			    break;
+			break;
 	   case 5:  return DateAbbr[4];
 		        break;
 	   case 6:  return DateAbbr[5];
-			    break;
+			break;
 	   case 7:  return DateAbbr[6];
-			    break;
+			break;
 	   case 8:  return DateAbbr[7];
-			    break;
+			break;
 	   case 9:  return DateAbbr[8];
 		        break;
 	   case 10: return DateAbbr[9];
-			    break;
+			break;
 	   case 11: return DateAbbr[10];
-				break;
+		        break;
 	   case 12: return DateAbbr[11];
-				break;
+			break;
 	   default: return ("Wrong Month Inserted....");
 		        break;
    }//Switch
@@ -220,7 +220,7 @@ int HashRecords :: GetAge(unsigned int &Month5, unsigned int &Day5, unsigned int
 	unsigned int Date2[] = {Month2, Day2, Year2};
 
 	//Subtract Date From Given Date
-    tm a = {0,0,0,Day5,Month5,Year5};
+        tm a = {0,0,0,Day5,Month5,Year5};
 	tm b = {0,0,0,Day2,Month2,Year2};
 	time_t x = mktime(&a);
 	time_t y = mktime(&b);
@@ -229,18 +229,18 @@ int HashRecords :: GetAge(unsigned int &Month5, unsigned int &Day5, unsigned int
 	if(x != (time_t)(-1) && y != (time_t)(-1))
 	{
 		    //Declare Variables to Convert Employee's Birthday into Their Age
-            double difference = difftime(y,x)/(60*60*24);
+                    double difference = difftime(y,x)/(60*60*24);
 		    int rounding = (int)round(difference);
-			int year = rounding/365;
-			int days = rounding%365;
-			int months = days/30;
+		    int year = rounding/365;
+		    int days = rounding%365;
+		    int months = days/30;
 		
 			//Convert The Date into Age
 			if(year >= 1 && months >= 6 && days >= 183)
 				return (year+1);
-		    else if(year >= 1 && months <= 5 && days <= 182)
+		        else if(year >= 1 && months <= 5 && days <= 182)
 				return (year);
-		    else
+		        else
 				return 0;
 	}//if
 }//GetAge()
@@ -254,8 +254,8 @@ void HashRecords :: PrintSubtitles(ostream& OutF)
 	OutF << setw(66) << "Employee Report" << endl;
 	OutF << setw(66) << "***************" << endl << endl;
 	OutF << left << "Last Name" << right << setw(16) << "Acct. Number" 
-		 << right << setw(24) << "Date of Birth" << right << setw(24) << "Annual Salary"
-		 << right << setw(23) << "Department Code" << right << setw(12) << "Age" << endl; 
+	     << right << setw(24) << "Date of Birth" << right << setw(24) << "Annual Salary"
+	     << right << setw(23) << "Department Code" << right << setw(12) << "Age" << endl; 
 		
 }//PrintSubtitles
 			  
@@ -354,19 +354,19 @@ void HashRecords :: PrintDataCollisions(HashNode *Temp, ostream& OutF)
 		//Move to Next Node BEFORE entering While Loop
 		Temp = Temp->next;
 	
-	    //While Temp != NULL, Print out the CCollision ontents
+	        //While Temp != NULL, Print out the CCollision ontents
 		while(Temp != NULL)
 		{
-			OutF << left << Temp->last_name << "\t\t\t"; 
+		    OutF << left << Temp->last_name << "\t\t\t"; 
 		    OutF << '*'<< setfill('0') << right << setw(4) << Temp->account_num;
 		    OutF << setfill(' ') << right << setw(20) << Date(Temp->month);
-			OutF << setfill('0') << setw(2) << Temp->day << ", " << Temp->year;
-			OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << Temp->annual_salary;
+		    OutF << setfill('0') << setw(2) << Temp->day << ", " << Temp->year;
+		    OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << Temp->annual_salary;
 		    OutF << right << setw(19) << Temp->dept_code;
-			OutF << right << setw(19) << GetAge(Temp->month, Temp->day, Temp->year) << endl; 
+		    OutF << right << setw(19) << GetAge(Temp->month, Temp->day, Temp->year) << endl; 
 			
-			//Move to Next Node
-			Temp = Temp->next;
+		    //Move to Next Node
+		    Temp = Temp->next;
 		}//while
 }//PrintData8Collisions
 
@@ -375,18 +375,18 @@ void HashRecords :: PrintDataCollisions(HashNode *Temp, ostream& OutF)
 //-|----------------------------------------
 void HashRecords :: PrintFirstData(HashNode* Temp, ostream& OutF)
 {
-		//If Temp != NULL, Print out the Contents
-		if(Temp != NULL)
-		{
-			OutF << left << Temp->last_name << "\t\t\t";		    
-			OutF << " " << setfill('0') << right << setw(4) << Temp->account_num;
-		    OutF << setfill(' ') << right << setw(20) << Date(Temp->month);
-			OutF << setfill('0') << setw(2) << Temp->day << ", " << Temp->year;
-			OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << Temp->annual_salary;
-		    OutF << right << setw(19) << Temp->dept_code;
-			OutF << right << setw(19) << GetAge(Temp->month, Temp->day, Temp->year)<< endl; 
+	//If Temp != NULL, Print out the Contents
+	if(Temp != NULL)
+	{
+		OutF << left << Temp->last_name << "\t\t\t";		    
+		OutF << " " << setfill('0') << right << setw(4) << Temp->account_num;
+		OutF << setfill(' ') << right << setw(20) << Date(Temp->month);
+		OutF << setfill('0') << setw(2) << Temp->day << ", " << Temp->year;
+		OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << Temp->annual_salary;
+		OutF << right << setw(19) << Temp->dept_code;
+		OutF << right << setw(19) << GetAge(Temp->month, Temp->day, Temp->year)<< endl; 
 				    			
-		    //Move to Next Node
-		    Temp = Temp->next;
-		}//if
+		//Move to Next Node
+		Temp = Temp->next;
+	}//if
 }//PrintFirstData()
