@@ -3,7 +3,7 @@
 // Assign ID:   Project 4A 
 // Due Date:    03/01/2018 at 12:30 pm
 //
-// Purpose:     Write a C++ program that inputs an unknown number of records stroed on a sequential file.
+// Purpose:     Write a C++ program that inputs an unknown number of records stored on a sequential file.
 //              Write a C++ program to create a hash table (containing 37 slots to store records) store the
 //              records using account_num as the key field. Use the method called chaining to handle collisions. 
 //       
