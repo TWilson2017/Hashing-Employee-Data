@@ -1,4 +1,4 @@
-									Hashing Employee Data
+							Hashing Employee Data
 
 
 Write a C++ program that inputs an unknown number of records stroed on a sequential file.
